@@ -17,7 +17,7 @@ addButtonEl.addEventListener("keypress", function(e) {
     
     if(e.key === "enter"){
         let inputValue = inputFieldEl.value
-        e.preventDefault();
+        
         document.getElementById("add-button").click();
         if(inputValue){
 
