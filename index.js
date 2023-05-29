@@ -14,8 +14,9 @@ const addButtonEl = document.getElementById("add-button")
 const shoppingListEl = document.getElementById("shopping-list")
 
 addButtonEl.addEventListener("keypress", function(e) {
-    let inputValue = inputFieldEl.value
+    
     if(e.key === "enter"){
+        let inputValue = inputFieldEl.value
         e.preventDefault();
         document.getElementById("add-button").click();
         if(inputValue){
