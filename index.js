@@ -19,7 +19,9 @@ addButtonEl.addEventListener("click", function() {
 
     
     push(shoppingListInDB, inputValue)
-    } 
+    } else{ shoppingListEl.innerHTML = "Please enter a shopping item..."
+        
+    }
     clearInputFieldEl()
 })
 
