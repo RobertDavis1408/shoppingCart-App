@@ -13,21 +13,17 @@ const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
 const shoppingListEl = document.getElementById("shopping-list")
 
-addButtonEl.addEventListener("keypress", function(e) {
+addButtonEl.addEventListener("click", function() {
+    let inputValue = inputFieldEl.value
     
-    if(e.key === "enter"){
-        let inputValue = inputFieldEl.value
-        
-        document.getElementById("add-button").click();
-        if(inputValue){
+    if(inputValue){
 
+    
+    push(shoppingListInDB, inputValue)
+    } else{ shoppingListEl.innerHTML = "Please enter a shopping item..."
         
-        push(shoppingListInDB, inputValue)
-        } else{ shoppingListEl.innerHTML = "Please enter a shopping item..."
-            
-        }
     }
-        clearInputFieldEl()
+    clearInputFieldEl()
 })
 
 onValue(shoppingListInDB, function(snapshot) {
