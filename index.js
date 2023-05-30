@@ -17,13 +17,13 @@ addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
     
     if(inputValue){
-
+        push(shoppingListInDB, inputValue)
+        clearInputFieldEl()
+    } 
+    else{ 
+        inputFieldEl.placeholder = "Enter items here...";
+        }
     
-    push(shoppingListInDB, inputValue)
-    } else{ inputFieldEl.placeholder = "Enter items here...";
-        
-    }
-    clearInputFieldEl()
 })
 
 onValue(shoppingListInDB, function(snapshot) {
