@@ -20,7 +20,7 @@ addButtonEl.addEventListener("click", function() {
 
     
     push(shoppingListInDB, inputValue)
-    } else{ shoppingListEl.innerHTML = "Please enter a shopping item..."
+    } else{ inputFieldEl.placeholder = "Enter items here...";
         
     }
     clearInputFieldEl()
@@ -49,6 +49,7 @@ function clearShoppingListEl() {
 
 function clearInputFieldEl() {
     inputFieldEl.value = ""
+    inputFieldEl.placeholder = "Enter item";
 }
 
 function appendItemToShoppingListEl(item) {
